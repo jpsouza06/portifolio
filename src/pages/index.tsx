@@ -33,7 +33,7 @@ const Home: NextPage = () => {
             </Text>
           </Flex>
 
-          <Image src='/images/perfil.png' w={{base: '200px', md:'300px', lg: '500px'}} mr='30px' border='4px solid #572CBB' borderRadius='10px' bgColor='#000000'/>
+          <Image src='/images/perfil.png' alt={"imagem"} w={{base: '200px', md:'300px', lg: '500px'}} mr='30px' border='4px solid #572CBB' borderRadius='10px' bgColor='#000000'/>
           
         </Stack >
         </Flex>

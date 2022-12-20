@@ -83,22 +83,38 @@ export default function Header() {
           >
             <MenuItem>
               <Link href='/'>
-                  <a><Text fontSize='20px' fontWeight='700'>{valor?.language =='PT-BR' ? 'Início' : 'Home'}</Text></a>
+                  <a>
+                    <Text fontSize='20px' fontWeight='700'>
+                      {valor?.language =='PT-BR' ? 'Início' : 'Home'}
+                    </Text>
+                  </a>
                 </Link>
             </MenuItem>
             <MenuItem>
               <Link href='/about'>
-                <a><Text fontSize='20px' fontWeight='700'>{valor?.language =='PT-BR' ? 'Sobre' : 'About'}</Text></a>
+                <a>
+                  <Text fontSize='20px' fontWeight='700'>
+                    {valor?.language =='PT-BR' ? 'Sobre' : 'About'}
+                  </Text>
+                </a>
               </Link>
             </MenuItem>
             <MenuItem>
               <Link href='/skills'>
-                <a><Text fontSize='20px' fontWeight='700'>{valor?.language =='PT-BR' ? 'Competências' : 'Skills'}</Text></a>
+                <a>
+                  <Text fontSize='20px' fontWeight='700'>
+                    {valor?.language =='PT-BR' ? 'Competências' : 'Skills'}
+                  </Text>
+                </a>
               </Link>
             </MenuItem>
             <MenuItem>
               <Link href='/projects'>
-                <a><Text fontSize='20px' fontWeight='700'>{valor?.language =='PT-BR' ? 'Projetos' : 'Projects'}</Text></a>
+                <a>
+                  <Text fontSize='20px' fontWeight='700'>
+                    {valor?.language =='PT-BR' ? 'Projetos' : 'Projects'}
+                  </Text>
+                </a>
               </Link>
             </MenuItem>
           </MenuList>
@@ -118,7 +134,6 @@ export default function Header() {
                 _expanded={{ bg: '#000000'}}
                 _active={{ bg : 0}}
               >
-                
                 {valor?.language === 'PT-BR'? 'PT-BR' : 'EN-US'}
               </MenuButton>
               <MenuList
@@ -127,18 +142,22 @@ export default function Header() {
                 h='0'
                 mt='-20px'
                 pt='0'
-                ml='4px'
+                ml='4px'    
+                minW='0'
               >
                 <MenuItem
                   fontSize='20px' 
                   fontWeight='700'
+                  marginLeft='0px'
+                  width='90px'
+                  m='0'
                   onClick={() => {valor?.language === 'PT-BR'? valor?.updateLanguage('EN-US') : valor?.updateLanguage('PT-BR')}}
                   _active={{ bg : 0}}
                   _hover={{}}
                   _focus={{}}
                 > 
                   {valor?.language === 'PT-BR'? 'EN-US' : 'PT-BR'}
-                  </MenuItem>
+                </MenuItem>
               </MenuList>
             </>
           )}

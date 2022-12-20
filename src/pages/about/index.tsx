@@ -21,7 +21,7 @@ const About: NextPage = () => {
 
         {valor?.language === 'PT-BR' ?  
           <Flex alignItems='center' m='100px auto' maxW='1062px' direction='column'>
-          <Text fontSize={{base: '40px', md: '60px'}} fontWeight='700' lineHeight='70px' color='purple.500' mb='43px'>Um pouco sobre mim...</Text>
+          <Text fontSize={{base: '40px', md: '60px'}} fontWeight='700' lineHeight='70px' color='purple.500' mb='43px' textAlign='center'>Um pouco sobre mim...</Text>
 
             <Stack direction={{base: 'column', lg: 'row'}} spacing={{base: '32px', md: '62px'}}>
               <Box w={{base: '400px', md: '486px'}} h={{base: '330px', md: '463px'}}  bgColor='#000000' borderRadius='10px'>
@@ -39,9 +39,7 @@ const About: NextPage = () => {
               </Box>
             </Stack>
           </Flex>
-
           
-
           : 
 
           <Flex alignItems='center' m='100px auto' maxW='1062px' direction='column'>
@@ -50,13 +48,13 @@ const About: NextPage = () => {
             <HStack spacing='62px'>
               <Box w='486px' h='463px' bgColor='#000000' borderRadius='10px'>
                 <Text fontSize={{base: '24px', lg: '35px'}} fontWeight='500' lineHeight='40px' pl='36px ' pr='36px' pt='70px'>
-                 My name is <span style={{'color': '#572CBB'}}>João Paulo</span>, I'm 22 years old and I live in Minas Gerais.<br/><br/>I am a <span style={{'color': '#572CBB'}}>calm 
+                 My name is <span style={{'color': '#572CBB'}}>João Paulo</span>, I&apos;m 22 years old and I live in Minas Gerais.<br/><br/>I am a <span style={{'color': '#572CBB'}}>calm 
                     </span> e <span style={{'color': '#572CBB'}}>responsible </span>person who likes to work in a team.
                 </Text>
               </Box>
               <Box w={{base: '24px', lg: '486px'}} h='463px' bgColor='#000000' borderRadius='10px'>
                 <Text fontSize={{base: '24px', lg: '35px'}} fontWeight='500' lineHeight='40px' pl='36px ' pr='36px' pt='70px'>
-                I'm looking for new <span style={{'color': '#572CBB'}}>experiences </span> and  <span style={{'color': '#572CBB'}}>challenges </span> to become 
+                I&apos;m looking for new <span style={{'color': '#572CBB'}}>experiences </span> and  <span style={{'color': '#572CBB'}}>challenges </span> to become 
                 a better <span style={{'color': '#572CBB'}}>person </span> and <span style={{'color': '#572CBB'}}>professional</span>.<br/><br/>
                 Always trying to get the most out of <span style={{'color': '#572CBB'}}>people</span>.
                 </Text>

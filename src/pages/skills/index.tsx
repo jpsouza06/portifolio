@@ -1,4 +1,4 @@
-import { Box, Flex, HStack, Text, UnorderedList, ListItem } from '@chakra-ui/react'
+import { Box, Flex, Text, UnorderedList, ListItem, Stack } from '@chakra-ui/react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Footer from '../../components/Footer'
@@ -19,7 +19,7 @@ const Skills: NextPage = () => {
         <Header />
 
           <Flex alignItems='center' m='100px auto' maxW='1062px' direction='column'>
-            <Text fontSize='60px' fontWeight='700' lineHeight='70px' color='purple.500' mb='43px'>
+            <Text fontSize={{base: '40px', md: '60px'}} fontWeight='700' textAlign='center' lineHeight='70px' color='purple.500' mb='43px'>
               
               {valor?.language == 'PT-BR' 
               ? 'Competências e Experiências' 
@@ -27,12 +27,12 @@ const Skills: NextPage = () => {
               }
             </Text>
 
-            <HStack spacing='62px'>
-              <Box w='486px' h='463px' bgColor='#000000' borderRadius='10px'>
-                <Text fontSize='40px' fontWeight='500' lineHeight='46px' color='purple.500' textAlign='center' mb='18px'>
+            <Stack direction={{base: 'column', lg: 'row'}} spacing={{base: '32px', md: '62px'}}>
+              <Box w={{base: '400px', md: '486px'}} h={{base: '400px', md: '463px'}} bgColor='#000000' borderRadius='10px'>
+                <Text fontSize={{base: '24px', md: '40px'}} fontWeight='500' lineHeight='46px' color='purple.500' textAlign='center' mb={{base: '0px', md: '18px'}}>
                   {valor?.language == 'PT-BR' ? 'Competências' : 'Skills'}
                 </Text>
-                <UnorderedList fontSize='35px' fontWeight='500' lineHeight='50px' pl='56px'>
+                <UnorderedList fontSize={{base: '24px', md: '35px'}} fontWeight='500' lineHeight='50px' pl={{base: '30px', md: '56px'}}>
                   <ListItem>HTML/CSS/JS;</ListItem>
                   <ListItem>React;</ListItem>
                   <ListItem>TypeScript;</ListItem>
@@ -42,11 +42,11 @@ const Skills: NextPage = () => {
                   <ListItem>Git/GitHub.</ListItem>
                 </UnorderedList>
               </Box>
-              <Box w='486px' h='463px' bgColor='#000000' borderRadius='10px'>
-                <Text fontSize='40px' fontWeight='500' lineHeight='46px' color='purple.500' textAlign='center' mb='18px'>
+              <Box w={{base: '400px', md: '486px'}} h={{base: '400px', md: '463px'}} bgColor='#000000' borderRadius='10px'>
+                <Text fontSize={{base: '24px', md: '40px'}} fontWeight='500' lineHeight='46px' color='purple.500' textAlign='center' mb={{base: '0px', md: '18px'}}>
                   {valor?.language == 'PT-BR' ? 'Experiências' : 'Experiences'}
                 </Text>
-                <UnorderedList fontSize='35px' fontWeight='500' lineHeight='40px' pl='56px'>
+                <UnorderedList fontSize={{base: '24px', md: '35px'}} fontWeight='500' lineHeight='40px' pl={{base: '30px', md: '56px'}}>
                   <ListItem>   
                     {valor?.language == 'PT-BR' 
                       ? <>Estágio - ATS.<br/> <span style={{'color': '#4a4848'}}>2022 - Atualmente</span></>
@@ -54,8 +54,8 @@ const Skills: NextPage = () => {
                     }
                   </ListItem>
                 </UnorderedList>
-                <Text fontSize='40px' fontWeight='500' lineHeight='46px' color='purple.500' textAlign='center' mb='18px' mt='33px'>Formação</Text>
-                <UnorderedList fontSize='35px' fontWeight='500' lineHeight='40px' pl='56px'>
+                <Text fontSize={{base: '24px', md: '40px'}} fontWeight='500' lineHeight='46px' color='purple.500' textAlign='center' mb={{base: '0px', md: '18px'}} mt={{base: '15px', md: '33px'}}>{valor?.language == 'PT-BR' ? 'Formação' : 'Formation'}</Text>
+                <UnorderedList fontSize={{base: '24px', md: '35px'}} fontWeight='500' lineHeight='40px' pl={{base: '30px', md: '56px'}}>
                   <ListItem>
                     {valor?.language == 'PT-BR' ? 'Sistemas de Informação' : 'Information System'} - UFVJM;<br/>
                     <span style={{'color': '#4a4848'}}>2019 - 2024</span>
@@ -63,7 +63,7 @@ const Skills: NextPage = () => {
                   <ListItem>Ignite - Rocketseat. <br/> <span style={{'color': '#4a4848'}}>2021</span></ListItem>
                 </UnorderedList>
               </Box>
-            </HStack>
+            </Stack>
           </Flex>
 
         <Footer />

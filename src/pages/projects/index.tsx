@@ -39,18 +39,29 @@ const Projects: NextPage = () => {
         <Header />
         
         <Flex alignItems='center' m='100px auto' maxW='1062px' direction='column'>
-        <Text fontSize='60px' fontWeight='700' lineHeight='70px' color='purple.500' mb='43px' textAlign='center'>
+        <Text fontSize={{base: '40px', md: '60px'}} fontWeight='700' lineHeight='70px' color='purple.500' mb='43px' textAlign='center'>
             {valor?.language == 'PT-BR' 
             ? 'Alguns projetos que já desenvolvi...' 
             : 'Some projects I\'ve already developed...'
             }
           </Text>
-          <Grid templateColumns='repeat(3, 1fr)' gap='70px'>
+          <Grid 
+            templateColumns=
+            {
+              {base: 'repeat(1, 1fr)',  md: 'repeat(2, 1fr)', lg: 'repeat(3, 1fr)'}
+            } 
+            gap='50px'
+          >
             {projects.map(project => (
-              <GridItem border='5px solid #000000'>
+              <GridItem border='5px solid #000000' key={project.id} m='20px'>
                 <NextLink href={project.url} passHref> 
                   <Link target='_blank' position='relative' className='box'>
-                    <Image src={project.image} transition={"0.2s ease-in-out"} className='imagem'/>
+                    <Image 
+                      src={project.image} 
+                      alt={"imagem"} 
+                      transition={"0.2s ease-in-out"} 
+                      className='imagem'
+                    />
                     <Text 
                       fontSize='25px' 
                       fontWeight='700' 
