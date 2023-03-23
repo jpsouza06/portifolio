@@ -28,31 +28,40 @@ const Skills: NextPage = () => {
             </Text>
 
             <Stack direction={{base: 'column', lg: 'row'}} spacing={{base: '32px', md: '62px'}}>
-              <Box w={{base: '400px', md: '486px'}} h={{base: '400px', md: '463px'}} bgColor='#000000' borderRadius='10px'>
+              <Box w={{base: '400px', md: '500px'}} p={{base: '10px 0 10px 0', md: '20px 0 20px 0'}} bgColor='#000000' borderRadius='10px'>
                 <Text fontSize={{base: '24px', md: '40px'}} fontWeight='500' lineHeight='46px' color='purple.500' textAlign='center' mb={{base: '0px', md: '18px'}}>
                   {valor?.language == 'PT-BR' ? 'Competências' : 'Skills'}
                 </Text>
                 <UnorderedList fontSize={{base: '24px', md: '35px'}} fontWeight='500' lineHeight='50px' pl={{base: '30px', md: '56px'}}>
-                  <ListItem>HTML/CSS/JS;</ListItem>
-                  <ListItem>React;</ListItem>
-                  <ListItem>TypeScript;</ListItem>
                   <ListItem>Delphi;</ListItem>
+                  <ListItem>Node;</ListItem>
+                  <ListItem>TypeScript;</ListItem>
+                  <ListItem>React;</ListItem>
+                  <ListItem>Flutter;</ListItem>
                   <ListItem>SQL;</ListItem>
-                  <ListItem>Azure DevOps;</ListItem>
-                  <ListItem>Git/GitHub.</ListItem>
+                  <ListItem>Git/GitHub;</ListItem>
+                  <ListItem>Scrum.</ListItem>
                 </UnorderedList>
               </Box>
-              <Box w={{base: '400px', md: '486px'}} h={{base: '400px', md: '463px'}} bgColor='#000000' borderRadius='10px'>
+              
+              <Box w={{base: '400px', md: '500px'}} p={{base: '10px 0 10px 0', md: '20px 0 20px 0'}} bgColor='#000000' borderRadius='10px'>
                 <Text fontSize={{base: '24px', md: '40px'}} fontWeight='500' lineHeight='46px' color='purple.500' textAlign='center' mb={{base: '0px', md: '18px'}}>
                   {valor?.language == 'PT-BR' ? 'Experiências' : 'Experiences'}
                 </Text>
                 <UnorderedList fontSize={{base: '24px', md: '35px'}} fontWeight='500' lineHeight='40px' pl={{base: '30px', md: '56px'}}>
                   <ListItem>   
                     {valor?.language == 'PT-BR' 
-                      ? <>Estágio - ATS.<br/> <span style={{'color': '#4a4848'}}>2022 - Atualmente</span></>
-                      : <>Internship - ATS.<br/> <span style={{'color': '#4a4848'}}>2022 - Present</span></>
+                      ? <>Desenvolvedor Delphi - ATS.<br/> <span style={{'color': '#4a4848'}}>2022 - Atualmente</span></>
+                      : <>Delphi Developer - ATS.<br/> <span style={{'color': '#4a4848'}}>2022 - Present</span></>
                     }
                   </ListItem>
+                  <ListItem>   
+                    {valor?.language == 'PT-BR' 
+                      ? <>Estágio - ATS.<br/> <span style={{'color': '#4a4848'}}>2022 - 2023</span></>
+                      : <>Internship - ATS.<br/> <span style={{'color': '#4a4848'}}>2022 - 2023</span></>
+                    }
+                  </ListItem>
+
                 </UnorderedList>
                 <Text fontSize={{base: '24px', md: '40px'}} fontWeight='500' lineHeight='46px' color='purple.500' textAlign='center' mb={{base: '0px', md: '18px'}} mt={{base: '15px', md: '33px'}}>{valor?.language == 'PT-BR' ? 'Formação' : 'Formation'}</Text>
                 <UnorderedList fontSize={{base: '24px', md: '35px'}} fontWeight='500' lineHeight='40px' pl={{base: '30px', md: '56px'}}>
