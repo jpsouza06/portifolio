@@ -4,12 +4,26 @@ import Head from 'next/head'
 import Footer from '../../components/Footer'
 import Header from '../../components/Header'
 
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import {LanguageContext} from '../../context/LanguageContext';
 
 
 const About: NextPage = () => {
   const valor = useContext(LanguageContext)
+
+  const [age, setAge] = useState<number | null>(null);
+
+  useEffect(() => {
+    const birthDate = new Date(2000, 10, 21); // mês começa do zero (novembro = 10)
+    const today = new Date();
+    let calculatedAge = today.getFullYear() - birthDate.getFullYear();
+    const m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+      calculatedAge--;
+    }
+    setAge(calculatedAge);
+  }, []);
+
   return (
     <>
       <Head>
@@ -26,7 +40,7 @@ const About: NextPage = () => {
             <Stack direction={{base: 'column', lg: 'row'}} spacing={{base: '32px', md: '62px'}}>
               <Box w={{base: '400px', md: '486px'}} h={{base: '330px', md: '463px'}}  bgColor='#000000' borderRadius='10px'>
                 <Text fontSize={{base: '24px', md: '35px'}} fontWeight='500' lineHeight='40px' p={{base: '30px 10px 0 5px', md: '70px 36px 0 36px'}}>
-                  Meu nome é <span style={{'color': '#572CBB'}}>João Paulo</span>, tenho 22 anos e moro em Minas Gerais.<br/><br/>Sou uma pessoa <span style={{'color': '#572CBB'}}>calma
+                  Meu nome é <span style={{'color': '#572CBB'}}>João Paulo</span>, tenho {age} anos e moro em Uberlândia.<br/><br/>Sou uma pessoa <span style={{'color': '#572CBB'}}>calma
                     </span> e <span style={{'color': '#572CBB'}}>responsável</span>, que gosta de trabalhar em equipe.
                 </Text>
               </Box>
@@ -48,8 +62,8 @@ const About: NextPage = () => {
             <HStack spacing='62px'>
               <Box w='486px' h='463px' bgColor='#000000' borderRadius='10px'>
                 <Text fontSize={{base: '24px', lg: '35px'}} fontWeight='500' lineHeight='40px' pl='36px ' pr='36px' pt='70px'>
-                 My name is <span style={{'color': '#572CBB'}}>João Paulo</span>, I&apos;m 22 years old and I live in Minas Gerais.<br/><br/>I am a <span style={{'color': '#572CBB'}}>calm 
-                    </span> e <span style={{'color': '#572CBB'}}>responsible </span>person who likes to work in a team.
+                 My name is <span style={{'color': '#572CBB'}}>João Paulo</span>, I&apos;m {age} years old and I live in Uberlândia.<br/><br/>I am a <span style={{'color': '#572CBB'}}>calm 
+                    </span> and <span style={{'color': '#572CBB'}}>responsible </span>person who likes to work in a team.
                 </Text>
               </Box>
               <Box w={{base: '24px', lg: '486px'}} h='463px' bgColor='#000000' borderRadius='10px'>

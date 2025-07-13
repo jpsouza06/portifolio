@@ -32,7 +32,7 @@ export default function Header() {
         <HStack spacing={{base: '30px', md: '67px'}} h='94px' position='relative' display={{base: 'none', md: 'flex'}}>
           <Flex direction='column' alignItems='center'>
             <Link href='/'>
-              <a><Text fontSize='20px' fontWeight='700'>{valor?.language =='PT-BR' ? 'Início' : 'Home'}</Text></a>
+              <Text fontSize='20px' fontWeight='700'>{valor?.language =='PT-BR' ? 'Início' : 'Home'}</Text>
             </Link>
             { pathname === '/' && 
                 <Divider w='93px' position='absolute' bottom='0' orientation='horizontal' borderColor='purple.500' borderBottomWidth='10px' opacity='1' borderRadius='20px 20px 0 0'/>
@@ -40,16 +40,16 @@ export default function Header() {
           </Flex>
 
           <Flex direction='column' alignItems='center'>
-          <Link href='/about'>
-              <a><Text fontSize='20px' fontWeight='700'>{valor?.language =='PT-BR' ? 'Sobre' : 'About'}</Text></a>
+            <Link href='/about'>
+              <Text fontSize='20px' fontWeight='700'>{valor?.language =='PT-BR' ? 'Sobre' : 'About'}</Text>
             </Link>
             { pathname === '/about' && 
                 <Divider w='93px' position='absolute' bottom='0' orientation='horizontal' borderColor='purple.500' borderBottomWidth='10px' opacity='1' borderRadius='20px 20px 0 0'/>
             }
           </Flex>
           <Flex direction='column' alignItems='center'>
-          <Link href='/skills'>
-              <a><Text fontSize='20px' fontWeight='700'>{valor?.language =='PT-BR' ? 'Competências' : 'Skills'}</Text></a>
+            <Link href='/skills'>
+              <Text fontSize='20px' fontWeight='700'>{valor?.language =='PT-BR' ? 'Competências' : 'Skills'}</Text>
             </Link>
             { pathname === '/skills' && 
                 <Divider w='93px' position='absolute' bottom='0' orientation='horizontal' borderColor='purple.500' borderBottomWidth='10px' opacity='1' borderRadius='20px 20px 0 0'/>
@@ -57,7 +57,7 @@ export default function Header() {
           </Flex>
           <Flex direction='column' alignItems='center' pr='10px'>
             <Link href='/projects'>
-              <a><Text fontSize='20px' fontWeight='700'>{valor?.language =='PT-BR' ? 'Projetos' : 'Projects'}</Text></a>
+              <Text fontSize='20px' fontWeight='700'>{valor?.language =='PT-BR' ? 'Projetos' : 'Projects'}</Text>
             </Link>
             { pathname === '/projects' && 
                 <Divider w='93px' position='absolute' bottom='0' orientation='horizontal' borderColor='purple.500' borderBottomWidth='10px' opacity='1' borderRadius='20px 20px 0 0'/>
@@ -83,38 +83,30 @@ export default function Header() {
           >
             <MenuItem>
               <Link href='/'>
-                  <a>
-                    <Text fontSize='20px' fontWeight='700'>
-                      {valor?.language =='PT-BR' ? 'Início' : 'Home'}
-                    </Text>
-                  </a>
-                </Link>
+                <Text fontSize='20px' fontWeight='700'>
+                  {valor?.language =='PT-BR' ? 'Início' : 'Home'}
+                </Text>
+              </Link>
             </MenuItem>
             <MenuItem>
               <Link href='/about'>
-                <a>
-                  <Text fontSize='20px' fontWeight='700'>
-                    {valor?.language =='PT-BR' ? 'Sobre' : 'About'}
-                  </Text>
-                </a>
+                <Text fontSize='20px' fontWeight='700'>
+                  {valor?.language =='PT-BR' ? 'Sobre' : 'About'}
+                </Text>
               </Link>
             </MenuItem>
             <MenuItem>
               <Link href='/skills'>
-                <a>
-                  <Text fontSize='20px' fontWeight='700'>
-                    {valor?.language =='PT-BR' ? 'Competências' : 'Skills'}
-                  </Text>
-                </a>
+                <Text fontSize='20px' fontWeight='700'>
+                  {valor?.language =='PT-BR' ? 'Competências' : 'Skills'}
+                </Text>
               </Link>
             </MenuItem>
             <MenuItem>
               <Link href='/projects'>
-                <a>
-                  <Text fontSize='20px' fontWeight='700'>
-                    {valor?.language =='PT-BR' ? 'Projetos' : 'Projects'}
-                  </Text>
-                </a>
+                <Text fontSize='20px' fontWeight='700'>
+                  {valor?.language =='PT-BR' ? 'Projetos' : 'Projects'}
+                </Text>
               </Link>
             </MenuItem>
           </MenuList>
@@ -130,6 +122,7 @@ export default function Header() {
                 bgColor='#000000'
                 fontSize='20px' 
                 fontWeight='700'
+                color='white'
                 _hover={{}}
                 _expanded={{ bg: '#000000'}}
                 _active={{ bg : 0}}
@@ -139,11 +132,7 @@ export default function Header() {
               <MenuList
                 bgColor='#000000'
                 border={'0'}
-                h='0'
-                mt='-20px'
-                pt='0'
                 ml='4px'    
-                minW='0'
               >
                 <MenuItem
                   fontSize='20px' 

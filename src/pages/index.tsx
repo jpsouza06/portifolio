@@ -1,9 +1,9 @@
 import type { NextPage } from 'next'
 import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 import Head from 'next/head'
 import { Box, Flex, Text, Image, Stack } from '@chakra-ui/react'
-import Footer from '../components/Footer'
 
 import { useContext } from 'react'
 import { LanguageContext } from '../context/LanguageContext'

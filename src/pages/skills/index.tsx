@@ -51,8 +51,8 @@ const Skills: NextPage = () => {
                 <UnorderedList fontSize={{base: '24px', md: '35px'}} fontWeight='500' lineHeight='40px' pl={{base: '30px', md: '56px'}}>
                   <ListItem>   
                     {valor?.language == 'PT-BR' 
-                      ? <>Desenvolvedor Delphi - ATS.<br/> <span style={{'color': '#4a4848'}}>2022 - Atualmente</span></>
-                      : <>Delphi Developer - ATS.<br/> <span style={{'color': '#4a4848'}}>2022 - Present</span></>
+                      ? <>Desenvolvedor Pleno- ATS.<br/> <span style={{'color': '#4a4848'}}>2022 - Atualmente</span></>
+                      : <>Mid-level Developer - ATS.<br/> <span style={{'color': '#4a4848'}}>2022 - Present</span></>
                     }
                   </ListItem>
                   <ListItem>   
@@ -66,8 +66,10 @@ const Skills: NextPage = () => {
                 <Text fontSize={{base: '24px', md: '40px'}} fontWeight='500' lineHeight='46px' color='purple.500' textAlign='center' mb={{base: '0px', md: '18px'}} mt={{base: '15px', md: '33px'}}>{valor?.language == 'PT-BR' ? 'Formação' : 'Formation'}</Text>
                 <UnorderedList fontSize={{base: '24px', md: '35px'}} fontWeight='500' lineHeight='40px' pl={{base: '30px', md: '56px'}}>
                   <ListItem>
-                    {valor?.language == 'PT-BR' ? 'Sistemas de Informação' : 'Information System'} - UFVJM;<br/>
-                    <span style={{'color': '#4a4848'}}>2019 - 2024</span>
+                    {valor?.language == 'PT-BR' 
+                      ? <>Análise e desenvolvimento de sistemas - Estácio<br/><span style={{'color': '#4a4848'}}>2022 - 2025</span></>
+                      : <>Systems Analysis and Development - Estácio<br/><span style={{'color': '#4a4848'}}>2022 - 2025</span></>
+                    }
                   </ListItem>
                   <ListItem>Ignite - Rocketseat. <br/> <span style={{'color': '#4a4848'}}>2021</span></ListItem>
                 </UnorderedList>
