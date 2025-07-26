@@ -1,4 +1,4 @@
-import { Box, Flex, Grid, GridItem, Image, Text, Link } from '@chakra-ui/react'
+import { Box, Flex, Grid, GridItem, Text } from '@chakra-ui/react'
 
 import type { NextPage } from 'next'
 import Head from 'next/head'
@@ -8,7 +8,7 @@ import { api } from "../../services/api";
 
 import Footer from '../../components/Footer'
 import Header from '../../components/Header'
-import NextLink from 'next/link';
+import ImageWithSpinner from '../../components/ImageWithSpinner'
 
 import { useContext } from 'react';
 import {LanguageContext} from '../../context/LanguageContext';
@@ -54,30 +54,30 @@ const Projects: NextPage = () => {
           >
             {projects.map(project => (
               <GridItem border='5px solid #000000' key={project.id} m='20px'>
-                <NextLink href={project.url} passHref> 
-                  <Link target='_blank' position='relative' className='box'>
-                    <Image 
-                      src={project.image} 
-                      alt={"imagem"} 
-                      transition={"0.2s ease-in-out"} 
-                      className='imagem'
-                    />
-                    <Text 
-                      fontSize='25px' 
-                      fontWeight='700' 
-                      position='absolute'
-                      textAlign='center' 
-                      top='50'
-                      left='0'
-                      right='0'
-                      visibility='hidden'
-                      className='imagemText'
-                      transition={"0.1s ease-in-out"}
-                    >
-                      {project.name}<br/><br/> {valor?.language == 'PT-BR' ? 'Visitar site' : 'Visit website'}
-                    </Text>
-                  </Link>
-                </NextLink>
+                <Box as="a" href={project.url} target='_blank' position='relative' className='box'>
+                  <ImageWithSpinner 
+                    src={project.image} 
+                    alt={`${project.name} project screenshot`} 
+                    transition={"0.2s ease-in-out"} 
+                    className='imagem'
+                    spinnerSize="lg"
+                    spinnerColor="purple.500"
+                  />
+                  <Text 
+                    fontSize='25px' 
+                    fontWeight='700' 
+                    position='absolute'
+                    textAlign='center' 
+                    top='50'
+                    left='0'
+                    right='0'
+                    visibility='hidden'
+                    className='imagemText'
+                    transition={"0.1s ease-in-out"}
+                  >
+                    {project.name}<br/><br/> {valor?.language == 'PT-BR' ? 'Visitar site' : 'Visit website'}
+                  </Text>
+                </Box>
               </GridItem>  
             ))}
           </Grid>
