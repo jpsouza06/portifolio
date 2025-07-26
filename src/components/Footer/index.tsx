@@ -14,15 +14,15 @@ export default function Footer() {
 
             <Text fontSize={{base: '15px', md: '20px'}} fontWeight='700' mb={{base: '10px', md: '18px'}} w='100%' textAlign={{base: 'center', md: 'left'}}>{valor?.language == 'PT-BR' ? 'Contatos:' : 'Contacts:'}</Text>
             
-            <Link href='https://www.linkedin.com/in/jpsouza21/' passHref>
-              <Flex as="a" target='_blank'>
+            <Link href='https://www.linkedin.com/in/jpsouza21/' target='_blank'>
+              <Flex cursor="pointer">
                 <Image src='/images/linkedin.png' width='25px' height='25px' mr='9px'/>
                 <Text fontSize={{base: '15px', md: '20px'}} fontWeight='700'>Linkedin: linkedin.com/in/jpsouza06</Text>
               </Flex>
             </Link>
 
-            <Link href='https://github.com/jpsouza06' passHref>
-              <Flex as="a" target='_blank'>
+            <Link href='https://github.com/jpsouza06' target='_blank'>
+              <Flex cursor="pointer">
                 <Image src='/images/github.png' width='25px' height='25px' mr='9px'/>
                 <Text fontSize={{base: '15px', md: '20px'}} fontWeight='700'>GitHub: github.com/jpsouza06</Text>
               </Flex>

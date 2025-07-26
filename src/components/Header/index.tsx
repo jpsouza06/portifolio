@@ -130,22 +130,61 @@ export default function Header() {
                 {valor?.language === 'PT-BR'? 'PT-BR' : 'EN-US'}
               </MenuButton>
               <MenuList
-                bgColor='#000000'
-                border={'0'}
-                ml='4px'    
+                bg='black'
+                backgroundColor='black'
+                borderWidth={0}
+                borderColor='transparent'
+                boxShadow='xl'
+                ml='4px'
+                minWidth='200px'
               >
+                <MenuItem
+                  fontSize='14px' 
+                  fontWeight='400'
+                  marginLeft='0px'
+                  width='200px'
+                  m='0'
+                  bg='black'
+                  backgroundColor='black'
+                  color='gray.400'
+                  _active={{ bg : 'black'}}
+                  _hover={{ bg : 'black'}}
+                  _focus={{ bg : 'black'}}
+                  cursor='default'
+                > 
+                  Selecione o idioma / Select language
+                </MenuItem>
                 <MenuItem
                   fontSize='20px' 
                   fontWeight='700'
                   marginLeft='0px'
-                  width='90px'
+                  width='200px'
                   m='0'
-                  onClick={() => {valor?.language === 'PT-BR'? valor?.updateLanguage('EN-US') : valor?.updateLanguage('PT-BR')}}
-                  _active={{ bg : 0}}
-                  _hover={{}}
-                  _focus={{}}
+                  bg='black'
+                  backgroundColor='black'
+                  onClick={() => valor?.updateLanguage('PT-BR')}
+                  _active={{ bg : 'gray.800'}}
+                  _hover={{ bg : 'gray.800'}}
+                  _focus={{ bg : 'gray.800'}}
+                  color={valor?.language === 'PT-BR' ? 'purple.500' : 'white'}
                 > 
-                  {valor?.language === 'PT-BR'? 'EN-US' : 'PT-BR'}
+                  🇧🇷 PT-BR
+                </MenuItem>
+                <MenuItem
+                  fontSize='20px' 
+                  fontWeight='700'
+                  marginLeft='0px'
+                  width='200px'
+                  m='0'
+                  bg='black'
+                  backgroundColor='black'
+                  onClick={() => valor?.updateLanguage('EN-US')}
+                  _active={{ bg : 'gray.800'}}
+                  _hover={{ bg : 'gray.800'}}
+                  _focus={{ bg : 'gray.800'}}
+                  color={valor?.language === 'EN-US' ? 'purple.500' : 'white'}
+                > 
+                  🇺🇸 EN-US
                 </MenuItem>
               </MenuList>
             </>
