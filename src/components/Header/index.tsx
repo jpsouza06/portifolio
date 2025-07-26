@@ -130,9 +130,13 @@ export default function Header() {
                 {valor?.language === 'PT-BR'? 'PT-BR' : 'EN-US'}
               </MenuButton>
               <MenuList
-                bgColor='#000000'
-                border={'0'}
-                ml='4px'    
+                bg='black'
+                backgroundColor='black'
+                borderWidth={0}
+                borderColor='transparent'
+                boxShadow='xl'
+                ml='4px'
+                minWidth='200px'
               >
                 <MenuItem
                   fontSize='14px' 
@@ -140,10 +144,12 @@ export default function Header() {
                   marginLeft='0px'
                   width='200px'
                   m='0'
+                  bg='black'
+                  backgroundColor='black'
                   color='gray.400'
-                  _active={{ bg : 'transparent'}}
-                  _hover={{ bg : 'transparent'}}
-                  _focus={{ bg : 'transparent'}}
+                  _active={{ bg : 'black'}}
+                  _hover={{ bg : 'black'}}
+                  _focus={{ bg : 'black'}}
                   cursor='default'
                 > 
                   Selecione o idioma / Select language
@@ -154,6 +160,8 @@ export default function Header() {
                   marginLeft='0px'
                   width='200px'
                   m='0'
+                  bg='black'
+                  backgroundColor='black'
                   onClick={() => valor?.updateLanguage('PT-BR')}
                   _active={{ bg : 'gray.800'}}
                   _hover={{ bg : 'gray.800'}}
@@ -168,6 +176,8 @@ export default function Header() {
                   marginLeft='0px'
                   width='200px'
                   m='0'
+                  bg='black'
+                  backgroundColor='black'
                   onClick={() => valor?.updateLanguage('EN-US')}
                   _active={{ bg : 'gray.800'}}
                   _hover={{ bg : 'gray.800'}}
