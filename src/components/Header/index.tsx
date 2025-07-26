@@ -55,11 +55,19 @@ export default function Header() {
                 <Divider w='93px' position='absolute' bottom='0' orientation='horizontal' borderColor='purple.500' borderBottomWidth='10px' opacity='1' borderRadius='20px 20px 0 0'/>
             }
           </Flex>
-          <Flex direction='column' alignItems='center' pr='10px'>
+          <Flex direction='column' alignItems='center'>
             <Link href='/projects'>
               <Text fontSize='20px' fontWeight='700'>{valor?.language =='PT-BR' ? 'Projetos' : 'Projects'}</Text>
             </Link>
             { pathname === '/projects' && 
+                <Divider w='93px' position='absolute' bottom='0' orientation='horizontal' borderColor='purple.500' borderBottomWidth='10px' opacity='1' borderRadius='20px 20px 0 0'/>
+            }
+          </Flex>
+          <Flex direction='column' alignItems='center' pr='10px'>
+            <Link href='/email'>
+              <Text fontSize='20px' fontWeight='700'>{valor?.language =='PT-BR' ? 'E-mail' : 'Email'}</Text>
+            </Link>
+            { pathname === '/email' && 
                 <Divider w='93px' position='absolute' bottom='0' orientation='horizontal' borderColor='purple.500' borderBottomWidth='10px' opacity='1' borderRadius='20px 20px 0 0'/>
             }
           </Flex>
@@ -106,6 +114,13 @@ export default function Header() {
               <Link href='/projects'>
                 <Text fontSize='20px' fontWeight='700'>
                   {valor?.language =='PT-BR' ? 'Projetos' : 'Projects'}
+                </Text>
+              </Link>
+            </MenuItem>
+            <MenuItem>
+              <Link href='/email'>
+                <Text fontSize='20px' fontWeight='700'>
+                  {valor?.language =='PT-BR' ? 'E-mail' : 'Email'}
                 </Text>
               </Link>
             </MenuItem>
